@@ -1,7 +1,7 @@
 import RediSync, { KeyWatcher, KeyWatcherOnChanged } from "@redsync/client-js"
 import { EventEmitter } from "events"
 import { v4 as uuidv4 } from "uuid"
-import { GAME_RICHARDS_BABY_2 } from "../common/games"
+import { GAME_DEMO } from "../common/games"
 import { Guess, Guesses } from "../data/types/guess.type"
 import { GuessMeta } from "../data/types/guessMeta.type"
 import { Leaderboard, Winner } from "../data/types/leaderboard.type"
@@ -133,7 +133,7 @@ export class RediSyncClient extends EventEmitter
 	}
 
 	async migrate(): Promise<void> {
-		const game = GAME_RICHARDS_BABY_2
+		const game = GAME_DEMO
 
 		const allGuesses: Array<GuessMeta> = []
 		const guesses = await this.rediSync.lrange("guesses", 0, -1)

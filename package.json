@@ -23,10 +23,13 @@
   "scripts": {
     "build": "vite build",
     "cleardist": "rm -rf dist",
-    "deploy": "aws s3 sync dist s3://name-game.mikerichards.tech/ --delete --profile mike && aws cloudfront create-invalidation --distribution-id E1R5RLYZBLUAOM --profile mike --paths \"/\" \"/*\"",
+    "deploy": "aws s3 sync dist s3://name-game.mikerichards.tech/ --profile mike && aws cloudfront create-invalidation --distribution-id E1R5RLYZBLUAOM --profile mike --paths \"/\" \"/*\"",
+    "deploy:demo": "aws s3 sync dist s3://name-game-demo.mikerichards.tech/ --profile mike && aws cloudfront create-invalidation --distribution-id E1TOSC5K2J7BYZ --profile mike --paths \"/\" \"/*\"",
     "postdeploy": "npm run cleardist",
+	"postdeploy:demo": "npm run postdeploy",
     "prebuild": "npm run cleardist",
     "predeploy": "npm run build",
+	"predeploy:demo": "npm run predeploy",
     "preview": "vite preview",
     "start": "vite"
   },
