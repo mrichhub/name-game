@@ -1,0 +1,27 @@
+:root {
+	--background-color: #121212;
+	--color-tone-1: #3a3a3c;
+	--color-tone-2: #565758;
+	--green: #6aaa64;
+	--green-darkened: #538d4e;
+	--text-color: #ffffff;
+}
+
+@import "./modals.scss";
+
+body {
+	background: var(--background-color);
+	color: var(--text-color);
+	margin: 0;
+	overflow: hidden auto;
+  	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}

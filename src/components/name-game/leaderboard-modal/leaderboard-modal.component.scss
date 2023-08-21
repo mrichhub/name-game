@@ -1,0 +1,53 @@
+.leaderboard-modal {
+	background-color: var(--background-color);
+	border-radius: 15px;
+	// border: solid 5px var(--text-color);
+	color: var(--text-color);
+
+	.game-title {
+		font-style: italic;
+	}
+
+	.close-btn {
+		filter: invert(100%) sepia(82%) saturate(123%) hue-rotate(239deg) brightness(111%) contrast(107%);
+		z-index: 99;
+	}
+
+	.empty-leaderboard {
+		padding-top: 30px;
+	}
+
+	.winner-table {
+		width: 100%;
+
+		tr {
+			td {
+				font-size: 20px;
+				padding-top: 16px;
+
+				&:first-child {
+					text-align: left;
+					width: 80%;
+				}
+
+				&:nth-child(2) {
+					width: 5%;
+				}
+
+				&:last-child {
+					width: 15%;
+				}
+			}
+		}
+
+		thead {
+			tr {
+				td {
+					font-size: min(24px, 5vw);
+					font-weight: bold;
+					padding-top: 0;
+				}
+			}
+		}
+	}
+}

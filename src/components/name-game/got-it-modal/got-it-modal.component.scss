@@ -1,0 +1,12 @@
+.got-it-modal {
+	color: black;
+
+	.correct-name {
+		font-size: 60px;
+		text-transform: uppercase;
+	}
+
+	.you-win-img {
+		max-width: min(100%, 200px);
+	}
+}

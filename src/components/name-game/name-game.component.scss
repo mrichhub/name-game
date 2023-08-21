@@ -1,0 +1,225 @@
+.name-game {
+	margin: auto;
+	max-width: 800px;
+	position: relative;
+
+	.title {
+		margin-block-end: 0;
+	}
+
+	.game-title {
+		display: block;
+		font-size: min(20px, 4.8vw);
+		font-weight: bold;
+		margin-block-end: 1.5em;
+		font-style: italic;
+	}
+
+	.profile-name {
+		font-size: min(16px, 3.7vw);
+		font-weight: bold;
+		position: absolute;
+		left: 15px;
+		top: 0;
+	}
+
+	.rules-button {
+		position: absolute;
+		right: 48px;
+		top: 5px;
+	}
+
+	.leaderboard-button {
+		position: absolute;
+		right: 15px;
+		top: 5px;
+	}
+
+	.daily-max-reached {
+		border: solid 1px #ffffff;
+		font-size: 0.9rem;
+		font-weight: bold;
+		margin: 8px auto 40px;
+		max-width: 300px;
+		padding: 10px;
+		text-align: center;
+	}
+
+	.type-your-guess {
+		margin-block-end: 0.5em;
+	}
+
+	.todays-guesses {
+		margin-block-end: 1em;
+
+		.guess-count {
+			background-color: var(--color-tone-1);
+			border-radius: 1000px;
+			display: inline;
+			padding: 5px 10px;
+		}
+	}
+
+	.guess-row {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		overflow: visible;
+		overflow-x: scroll;
+
+		&.current-guess {
+			&.empty-guess {
+				.guess-letter-container {
+					transition: none;
+				}
+			}
+
+			&:not(.empty-guess) {
+				.guess-letter-container {
+					&.cursor-container {
+						border-color: transparent;
+						transition: none;
+
+						.guess-letter {
+							align-items: end;
+						}
+					}
+				}
+			}
+
+			&.has-focus {
+				.guess-letter-container {
+					border-color: var(--color-tone-2);
+					color: var(--text-color);
+				}
+			}
+
+			.guess-letter-container {
+				animation: letterBounce 200ms ease-in forwards;
+				transform: scale(0);
+				width: 85px;
+			}
+		}
+
+		&.previous-guess {
+			.guess-letter-container {
+				background: var(--color-tone-1);
+				color: var(--text-color);
+			}
+		}
+
+		&.correct {
+			.guess-letter-container {
+				background: var(--green-darkened);
+			}
+		}
+
+		.guess-letter-container {
+			animation: letterFlip 250ms ease-in forwards;
+			aspect-ratio: 1/1;
+			border: solid 1px var(--color-tone-1);
+			color: var(--color-tone-1);
+			margin: 3px;
+			min-width: 34px;
+			transform: rotateX(90deg);
+			transition: border-color 125ms linear, color 125ms linear;
+			width: 60px;
+
+			.guess-letter {
+				align-items: center;
+				display: flex;
+				flex-shrink: 1;
+				font-size: 2rem;
+				font-weight: bold;
+				height: 100%;
+				justify-content: center;
+				position: relative;
+				text-transform: uppercase;
+				width: 100%;
+
+				&.blink {
+					animation: blinker 0.8s linear infinite;
+				}
+
+				&.tap-here-to-guess {
+					font-size: 1.2rem;
+				}
+
+				.guess-input {
+					background-color: var(--background-color);
+					border: none;
+					caret-color: transparent;
+					color: var(--background-color);
+					height: 100%;
+					left: 0;
+					margin: 0;
+					outline: none;
+					padding: 0;
+					position: absolute;
+					top: 0;
+					width: 100%;
+					z-index: -1;
+				}
+			}
+		}
+	}
+
+	.guess-stats {
+		animation: statDisplay 500ms ease-in forwards;
+		background-color: var(--color-tone-1);
+		border-radius: 1000px;
+		display: table;
+		font-size: 11px;
+		margin: 2px auto 15px;
+		padding: 5px 30px;
+		transform: scale(0);
+
+		&.correct {
+			background-color: var(--green-darkened);
+		}
+
+		.stat {
+			display: inline;
+			margin: 0 2px;
+		}
+	}
+
+	.submit-guess {
+		display: table;
+		margin: 2px auto 20px;
+		padding: 5px 30px;
+		transition: opacity 500ms linear;
+
+		button {
+			-webkit-tap-highlight-color: transparent;
+			background-color: var(--color-tone-2);
+			border: none;
+			border-radius: 1000px;
+			color: white;
+			cursor: pointer;
+			font-size: 16px;
+			font-weight: bold;
+			outline: none;
+			padding: 10px 20px;
+			transition: transform 125ms ease, opacity 500ms ease-in-out;
+
+			&:not(:disabled) {
+				&:active {
+					transform: translateY(2px) scale(0.95);
+				}
+			}
+
+			&:disabled {
+				opacity: 0.5;
+			}
+
+			&:focus {
+				outline: none;
+			}
+
+			&.empty-guess {
+				opacity: 0;
+			}
+		}
+	}
+}

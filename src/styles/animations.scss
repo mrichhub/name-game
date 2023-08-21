@@ -1,0 +1,23 @@
+
+@keyframes blinker {
+	0% { opacity: 1;}
+	35% { opacity: 1;}
+	50% { opacity: 0; }
+	85% { opacity: 0; }
+}
+
+@keyframes letterBounce {
+	0% { transform: scale(0); }
+	80% { transform: scale(1.07); }
+	100% { transform: scale(1); }
+}
+
+@keyframes letterFlip {
+	0% { transform: rotateX(90deg); }
+	100% { transform: rotateX(0); }
+}
+
+@keyframes statDisplay {
+	0% { transform: scale(0); }
+	100% { transform: scale(1); }
+}

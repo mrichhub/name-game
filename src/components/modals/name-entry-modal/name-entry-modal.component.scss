@@ -1,0 +1,29 @@
+.name-entry-modal {
+	color: black;
+
+	input {
+		width: 95%;
+	}
+
+	button {
+		-webkit-tap-highlight-color: transparent;
+		background: transparent;
+		border: solid 1px black;
+		border-radius: 15px;
+		cursor: pointer;
+		font-size: 14px;
+		font-weight: bold;
+		margin-top: 15px;
+		padding: 15px;
+		outline: none;
+		transition: transform 20ms ease-in-out;
+
+		&:active {
+			transform: scale(0.85);
+		}
+
+		&:disabled {
+			opacity: 0;
+		}
+	}
+}

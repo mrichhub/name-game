@@ -1,0 +1,22 @@
+.rules-button {
+	-webkit-tap-highlight-color: transparent;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	transition: transform 80ms ease-in-out;
+
+	&:active {
+		transform: scale(0.8);
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	.rules-icon {
+		path {
+			fill: var(--text-color);
+		}
+	}
+}

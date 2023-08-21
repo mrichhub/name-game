@@ -1,0 +1,24 @@
+.rules-modal {
+	color: black;
+
+	.modal-content {
+		p {
+			text-align: left;
+
+			&.demo-notice {
+				font-size: 18px;
+				font-weight: bold;
+				text-align: center;
+			}
+		}
+	
+		ul {
+			padding-inline-start: 30px;
+			text-align: left;
+	
+			li {
+				margin: 14px 0;
+			}
+		}
+	}
+}
