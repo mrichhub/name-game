@@ -10,8 +10,12 @@ The most competitive name reveal in history!
 	- 🟡 = Correct letter in wrong spot
 	- ❌ = No correct letters
 - The trick is you won't know WHICH letter is correct. You'll have to figure that out with your guesses. Guess wisely!
-- When we say a letter is in the wrong spot, we're always determining the spot from the start of the name.
-	- Meaning, if the name ends with a "Z": _ _ Z, and you guess _ _ _ _ _ _ Z, we'll give you a 🟡 because while the last letter is "Z", it's not in the 7th position as you guessed.
+- "right spot", "wrong spot": "spot" placement is always determined from the start of the name.
+	- Meaning, if the name ends with a "Z": _ _ Z, and you guess _ _ _ _ _ _ Z, you'll get a 🟡 because while the last letter is "Z", it's not in the 7th position as you guessed.
+
+## Play the game now
+
+[Play the demo game](https://name-game-demo.mikerichards.tech)
 
 ## Available Scripts
 
