@@ -15,6 +15,5 @@ The page will reload if you make edits.\
 
 ## Author
 
-Mike Richards
-Check out my [portfolio](https://mikerichards.tech)
-Email me at [name-game@mikerichards.tech](mailto:name-game@mikerichards.tech)
+Mike Richards • [name-game@mikerichards.tech](mailto:name-game@mikerichards.tech)\
+Check out my [portfolio](https://mikerichards.tech).
